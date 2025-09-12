@@ -387,7 +387,7 @@
         <form class="application-form" 
               id="applicationForm" 
               enctype="multipart/form-data"
-              action="https://formsubmit.co/wellokal7@gmail.com" 
+              action="https://submit-form.com/lBICObf9a" 
               method="POST"
               >
             
@@ -479,11 +479,14 @@
                             <option value="science">Science</option>
                             <option value="english">English</option>
                             <option value="social-studies">Social Studies</option>
-                            <option value="arts">Arts</option>
-                            <option value="sports">Sports</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Arabic">Arabic</option>
                             <option value="ict">ICT / Computing</option>
-                            <option value="music">Music</option>
-                            <option value="literature">Literature</option>
+                            <option value="Home economics">Home economics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Data analysis">Data analysis</option>
+                            <option value="Chemistry">Chemistry</option>
+                             <option value="Biology">Biology</option>
                             <option value="foreign-language">Foreign Language</option>
                             <option value="other">Other</option>
                         </select>
@@ -518,7 +521,7 @@
                         <label class="form-label" for="goals">
                             Your Goals & Dreams
                         </label>
-                        <textarea id="goals" name="goals" class="form-textarea" rows="3" placeholder="What do you hope to achieve at this school?"></textarea>
+                        <textarea id="goals" name="goals" class="form-textarea" rows="3" placeholder="What do you hope to achieve at Sheikh Tais Academy?"></textarea>
                     </div>
 
                     <div class="form-group full-width">
@@ -551,7 +554,7 @@
                             <option value="business-owner">Business Owner / Entrepreneur</option>
                             <option value="police">Police Officer</option>
                             <option value="soldier">Soldier</option>
-                            <option value="firefighter">Firefighter</option>
+                            <option value="Data analyst">Data analyst</option>
                             <option value="journalist">Journalist</option>
                             <option value="actor">Actor / Actress</option>
                             <option value="politician">Politician</option>
@@ -591,7 +594,7 @@
                         <label class="form-label" for="motivation">
                             Why Do You Want to Attend Sheikh tais Academy <span class="required">*</span>
                         </label>
-                        <textarea id="motivation" name="motivation" class="form-textarea" rows="4" required placeholder="Tell us what excites you about joining Oshek Thais Academy. What inspires you to study here and what do you hope to achieve?"></textarea>
+                        <textarea id="motivation" name="motivation" class="form-textarea" rows="4" required placeholder="Tell us what excites you about joining Sheikh Tais Academy. What inspires you to study here and what do you hope to achieve?"></textarea>
                         <div class="error-message" id="motivationError">Please share your motivation</div>
                     </div>
 
@@ -628,7 +631,7 @@
                 <div class="checkbox-group">
                     <input type="checkbox" id="terms" name="terms" class="checkbox-input" required>
                     <label for="terms" class="form-label">
-                        I confirm that all information provided is accurate and truthful <span class="required">*</span>
+                        confirm that all information provided is correct<span class="required">*</span>
                     </label>
                 </div>
                 <div class="error-message" id="termsError">Please accept the terms and conditions</div>
@@ -765,17 +768,9 @@
             });
         });
 
-        // Initialize progress (Your original code)
         updateProgress();
-
-        // =========================================================================================
-        // === STEP 2: THIS SUBMISSION CODE IS MODIFIED TO WORK WITH FORMSPREE =====================
-        // =========================================================================================
-        // This new code replaces your old simulation. It sends all form data, including the image,
-        // to the URL you provided in the <form> tag's 'action' attribute.
-        
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop the form from submitting the old way
+            e.preventDefault(); 
 
             let isFormValid = true;
             formFields.forEach(field => {

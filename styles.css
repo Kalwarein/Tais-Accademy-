@@ -1,3 +1,17 @@
+/* Remove focus outline and box-shadow from all elements */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove tap highlight color globally */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  -moz-tap-highlight-color: transparent !important;
+  -ms-tap-highlight-color: transparent !important;
+  tap-highlight-color: transparent !important;
+}
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -8,7 +22,18 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* Professional Yellow HR Line */
+hr {
+  border: none;                /* Remove default browser style */
+  height: 3px;                 /* Thickness of the line */
+  background: linear-gradient(to right, #FFD700, #FFC300); /* Smooth yellow gradient */
+  border-radius: 3px;          /* Slightly rounded edges */
+  margin: 1.5rem 0;            /* Space above and below */
+  width: 80%;                  /* Not too wide */
+  max-width: 600px;            /* Keep it neat on large screens */
+  margin-left: auto;
+  margin-right: auto;
+}
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
