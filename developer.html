@@ -3,607 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer - Sheikh Tais Academy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Meet the Developer - Sheikh Tais Academy</title>
+    <meta name="description" content="Meet the developer behind Sheikh Tais Academy's digital solutions and mobile applications.">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-
-        /* Header Styles */
-        .header {
-            background: #5C4033;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #FFC107;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #FFC107;
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-top: 80px;
-            padding: 2rem 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #5C4033 0%, #8B4513 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            margin-bottom: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #FFC107, #FFD54F);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .developer-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #FFC107;
-            margin: 2rem auto;
-            display: block;
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        /* Content Sections */
-        .content-section {
-            background: white;
-            margin: 2rem 0;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .content-section:hover {
-            transform: translateY(-5px);
-        }
-
-        .section-title {
-            color: #5C4033;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: #FFC107;
-            border-radius: 2px;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: #FFC107;
-            transform: translateY(-5px);
-        }
-
-        .skill-icon {
-            font-size: 3rem;
-            color: #5C4033;
-            margin-bottom: 1rem;
-        }
-
-        .skill-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #5C4033;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-level {
-            background: #5C4033;
-            height: 8px;
-            border-radius: 4px;
-            margin-top: 1rem;
-            position: relative;
-        }
-
-        .skill-progress {
-            background: #FFC107;
-            height: 100%;
-            border-radius: 4px;
-            transition: width 2s ease;
-        }
-
-        /* Project Showcase */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            color: #5C4033;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-description {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .tech-tag {
-            background: #FFC107;
-            color: #5C4033;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Video Section */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 2rem auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-card {
-            background: linear-gradient(135deg, #5C4033 0%, #8B4513 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            color: #FFC107;
-            margin-bottom: 1rem;
-        }
-
-        .contact-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-info {
-            opacity: 0.9;
-        }
-
-        .contact-link {
-            color: #FFC107;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-link:hover {
-            color: white;
-        }
-
-        /* Footer */
-        .footer {
-            background: #5C4033;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .content-section {
-                padding: 2rem 1rem;
-            }
-
-            .skills-grid,
-            .project-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">Sheikh Tais Academy</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="documentation.html">Documentation</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="download.html">Download</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Sheikh Tais Academy</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="documentation.html" class="nav-link">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="download.html" class="nav-link">Download</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Hero Section -->
-            <section class="hero-section animate-fade-in">
-                <div class="hero-content">
-                    <img src="/dev/IMG_20250911_120804~2.jpg" alt="Developer Photo" class="developer-image">
-                    <h1>Meet the Developer</h1>
-                    <p>Passionate Full-Stack Developer & Mobile App Specialist</p>
-                    <p>Creating innovative solutions for educational institutions,ai platforms and more</p>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">About Me</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8; text-align: center; color: #555; max-width: 800px; margin: 0 auto;">
-                    Hi! I'm a 15-year-old Sheikh Tais Academy student and passionate young developer who loves building apps that solve real problems. Over the past two years, I've been learning to create web and mobile applications, focusing on tools that make school life easier for students, teachers, and parents. One of my proudest projects is the Sheikh Tais Academy app, which helps connect our school community by sharing updates, assignments, and important announcements. My goal is to keep creating simple, useful, and fun solutions that make education more engaging and accessible for everyone
-                </p>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-js-square skill-icon"></i>
-                        <div class="skill-name">JavaScript</div>
-                        <p>Modern ES6+, React, Node.js</p>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-android skill-icon"></i>
-                        <div class="skill-name">Mobile Development</div>
-                        <p>React Native, Flutter, Android</p>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-database skill-icon"></i>
-                        <div class="skill-name">Database</div>
-                        <p>MySQL, MongoDB, Firebase</p>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-aws skill-icon"></i>
-                        <div class="skill-name">Cloud Services</div>
-                        <p>AWS, Google Cloud, Vercel</p>
-                        <div class="skill-level">
-                            <div class="skill-progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Project Showcase -->
-            
-
-            <!-- Video Introduction -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">Developer Introduction</h2>
-                <div class="video-container">
-                    <video controls poster="/gallery/1757238086130.jpg">
-                        <source src="/video/AQM8AXLZnu6TL5NraFva_DwRW9MRY_9gyy4uZh7xK3jemdGH0ch7HDf2GrjAJm8IQefQUTMTCuZgYCwK5VbOznsl.mp4" type="video/mp4">
-                        <p>Your browser doesn't support HTML5 video. Here's a <a href="/placeholder.mp4">link to the video</a> instead.</p>
-                    </video>
-                </div>
-                <p style="text-align: center; margin-top: 1rem; color: #666; font-style: italic;">
-                    Watch this brief introduction to learn more about my development journey and the Sheikh Tais Academy project.
-                </p>
-            </section>
-
-            <!-- App Demo Video -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">At Our school Hall</h2>
-                <div class="video-container">
-                    <video controls poster="/gallery/1757238090495.jpg">
-                        <source src="/video/AQPZRahvU_Tbne9_hBrebr7acqL0RQbw9-lYUOjaJtThi5gYCX0Na_qg3PRSvhTiQZX3424Au4yNtzxoX1C0MIUP6zVQMJy0DQLTo6kz7PjdvQ.mp4" type="video/mp4">
-                        <p>Your browser doesn't support HTML5 video. Here's a <a href="/placeholder-demo.mp4">link to the video</a> instead.</p>
-                    </video>
-                </div>
-                <p style="text-align: center; margin-top: 1rem; color: #666; font-style: italic;">
-                    See the Sheikh Tais Academy students in the hall
-                </p>
-            </section>
-
-            <!-- Contact Section -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <h3 class="contact-title">Email</h3>
-                        <p class="contact-info">
-                            <a href="mailto:wellokal7@gmail.com" class="contact-link">wellokal7@gmail.com</a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-linkedin contact-icon"></i>
-                        <h3 class="contact-title">LinkedIn</h3>
-                        <p class="contact-info">
-                            <a href="https://linkedin.com/in/developer" class="contact-link">linkedin.com/in/developer</a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fab fa-github contact-icon"></i>
-                        <h3 class="contact-title">GitHub</h3>
-                        <p class="contact-info">
-                            <a href="https://github.com/Kalwarein" class="contact-link">github account</a>
-                        </p>
-                    </div>
-                    <div class="contact-card">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <h3 class="contact-title">Phone</h3>
-                        <p class="contact-info">+232- 30891960</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section class="content-section animate-fade-in">
-                <h2 class="section-title">What People Say</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 10px; border-left: 4px solid #FFC107;">
-                        <p style="font-style: italic; margin-bottom: 1rem; color: #555;">
-                            "The Sheikh Tais Academy app has revolutionized how we manage our school operations. The developer's attention to detail and user experience is exceptional."
-                        </p>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <img src="/placeholder.svg?height=50&width=50" alt="Principal" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                            <div>
-                                <strong style="color: #5C4033;">Dr. Sarah Ahmed</strong>
-                                <p style="color: #666; font-size: 0.9rem;">Principal, Sheikh Tais Academy</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 10px; border-left: 4px solid #FFC107;">
-                        <p style="font-style: italic; margin-bottom: 1rem; color: #555;">
-                            "Working with this developer was a fantastic experience. They delivered exactly what we needed and more. Highly recommended!"
-                        </p>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <img src="/placeholder.svg?height=50&width=50" alt="Teacher" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
-                            <div>
-                                <strong style="color: #5C4033;">Mr. Hassan Ali</strong>
-                                <p style="color: #666; font-size: 0.9rem;">Head Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <!-- Mobile Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Sheikh Tais Academy</span>
+            </div>
+            <button class="sidebar-close" id="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html" class="sidebar-link">Home</a></li>
+            <li><a href="about.html" class="sidebar-link">About</a></li>
+            <li><a href="features.html" class="sidebar-link">Features</a></li>
+            <li><a href="news.html" class="sidebar-link">News</a></li>
+            <li><a href="documentation.html" class="sidebar-link">Documentation</a></li>
+            <li><a href="gallery.html" class="sidebar-link">Gallery</a></li>
+            <li><a href="download.html" class="sidebar-link">Download</a></li>
+            <li><a href="developer.html" class="sidebar-link active">Developer</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Meet the Developer</h1>
+                <p class="page-subtitle">Behind the scenes of Sheikh Tais Academy's digital transformation</p>
+            </div>
+        </section>
+
+        <!-- Developer Profile -->
+        <section class="developer-profile section">
+            <div class="container">
+                <div class="developer-content">
+                    <div class="developer-image">
+                        <img src="./gallery/1757238086130.jpg" alt="Developer photo" />
+                        <div class="developer-badge">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack Developer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="developer-info">
+                        <h2 class="section-title">The Mastermind Behind Tais Software Platforms</h2>
+                        <p class="developer-intro">
+                            Meet the innovative developer who brought Sheikh Tais Academy into the digital age. With passion for education technology and years of experience in software development, our developer has created comprehensive digital solutions that connect students, parents, and teachers seamlessly.
+                        </p>
+                        
+                        <div class="developer-skills">
+                            <h3>Technical Expertise</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <i class="fab fa-android"></i>
+                                    <span>Android Development</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Web Development</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>Database Design</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Apps</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-server"></i>
+                                    <span>Backend Systems</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-cloud"></i>
+                                    <span>Cloud Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="developer-achievements">
+                            <h3>Key Achievements</h3>
+                            <ul>
+                                <li>Developed the complete Sheikh Tais Academy mobile application</li>
+                                <li>Created the school's comprehensive website and digital platform</li>
+                                <li>Implemented secure student management systems</li>
+                                <li>Built real-time communication tools for parents and teachers</li>
+                                <li>Designed user-friendly interfaces for all digital solutions</li>
+                                <li>Ensured robust security and data protection measures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered -->
+        <section class="services-section section">
+            <div class="container">
+                <h2 class="section-title">Custom Development Services</h2>
+                <p class="section-subtitle">Get your own professional website and mobile applications developed</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Website Development</h3>
+                        <p>Professional, responsive websites for businesses, schools, and organizations with modern design and functionality.</p>
+                        <ul>
+                            <li>Responsive design for all devices</li>
+                            <li>SEO optimization</li>
+                            <li>Content management systems</li>
+                            <li>E-commerce solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Custom Android and iOS applications tailored to your specific needs and requirements.</p>
+                        <ul>
+                            <li>Native Android development</li>
+                            <li>Cross-platform solutions</li>
+                            <li>User-friendly interfaces</li>
+                            <li>App store deployment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>School Management Systems</h3>
+                        <p>Comprehensive digital solutions for educational institutions to manage students, staff, and operations.</p>
+                        <ul>
+                            <li>Student information systems</li>
+                            <li>Grade management</li>
+                            <li>Parent communication portals</li>
+                            <li>Attendance tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>E-Commerce Solutions</h3>
+                        <p>Complete online store development with payment integration and inventory management.</p>
+                        <ul>
+                            <li>Online store setup</li>
+                            <li>Payment gateway integration</li>
+                            <li>Inventory management</li>
+                            <li>Order tracking systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Transform your business or organization with custom digital solutions. Contact us today for a consultation!</p>
+                    <div class="contact-buttons">
+                        <a href="contact.html" class="cta-button">Get a Quote</a>
+                        <a href="#" class="cta-button" onclick="window.open('https://wa.me/232123456789', '_blank')">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section class="portfolio-section section">
+            <div class="container">
+                <h2 class="section-title">Portfolio Highlights</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="./img/app-mockup.png" alt="Sheikh Tais Academy App" />
+                        <div class="portfolio-overlay">
+                            <h4>Sheikh Tais Academy App</h4>
+                            <p>Complete school management mobile application</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="./gallery/1757249644500.jpg" alt="Academy Website" />
+                        <div class="portfolio-overlay">
+                            <h4>Academy Website</h4>
+                            <p>Modern, responsive website with comprehensive features</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Sheikh Tais Academy Developer Portfolio. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">Built with passion for education and technology</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Sheikh Tais Academy</span>
+                    </div>
+                    <p class="footer-description">
+                        Committed to providing quality education and fostering academic excellence through innovative learning solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Shell, Woodlowy Park, Freetown, Sierra Leone</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+232 (0) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@shaikhtaisacademy.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sheikh Tais Academy. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('.content-section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Animate skill progress bars
-        const skillProgressBars = document.querySelectorAll('.skill-progress');
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBar = entry.target;
-                    const width = progressBar.style.width;
-                    progressBar.style.width = '0%';
-                    setTimeout(() => {
-                        progressBar.style.width = width;
-                    }, 500);
-                }
-            });
-        }, observerOptions);
-
-        skillProgressBars.forEach(bar => {
-            skillObserver.observe(bar);
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
