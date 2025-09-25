@@ -25,7 +25,15 @@ step-item {
 .screenshot-item {
   text-align: center;
 }
-
+.step-title {
+  text-align: center;
+}
+.step-description {
+  text-align: center;
+}
+.subsection-title {
+  text-align: center;
+}
 .screenshot-item img {
   width: 100%;
   max-width: 250px;
@@ -657,7 +665,6 @@ body {
   right: -10%;
   width: 40%;
   height: 200%;
-  background: linear-gradient(45deg, rgba(255, 193, 7, 0.1), transparent);
   border-radius: 50%;
   animation: float 6s ease-in-out infinite;
 }
@@ -1350,22 +1357,50 @@ body {
   text-align: center;
   animation: fadeInUp 0.6s ease-out 0.5s both;
 }
-
 .download-image {
+  position: relative;
+  display: inline-block;
   animation: fadeInRight 0.8s ease-out 0.2s both;
+  cursor: pointer;
 }
 
 .download-image img {
   width: 100%;
-  height: auto;
+  height: 90%;
   border-radius: var(--border-radius);
-  transition: var(--transition);
+  transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 .download-image img:hover {
-  transform: scale(1.05) rotate(-2deg);
+  transform: scale(0.90) rotate(-2deg);
 }
 
+/* Overlay text styling */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: var(--border-radius);
+}
+
+.image-overlay.show {
+  opacity: 1;
+}
+
+/* Click animation */
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 /* Enhanced Footer */
 .footer {
   background: var(--primary-color);
@@ -1427,7 +1462,7 @@ body {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  border-radius: 70%;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -20,7 +20,28 @@ document.addEventListener("DOMContentLoaded", () => {
   initFormAnimations()
   initHoverEffects()
 })
+const images = [
+"/img/unnamed (7).png",
+"/img/file_000000004f14624685a3354dd87d601d.png",
+"/img/unnamed (6).png"
+];
 
+  let index = 0;
+  const imageElement = document.getElementById("slideshow-image");
+  const overlayElement = document.getElementById("image-overlay");
+  const overlayText = document.getElementById("overlay-text");
+  const container = document.getElementById("image-container");
+
+  // Slideshow effect (changes image every 2 seconds)
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imageElement.style.opacity = 0;
+    setTimeout(() => {
+      imageElement.src = images[index];
+      overlayText.textContent = overlayTexts[index];
+      imageElement.style.opacity = 1;
+    }, 300);
+  }, 2000);
 // Enhanced Splash Screen with Animation
 function initSplashScreen() {
   const splashScreen = document.getElementById("splash-screen")
